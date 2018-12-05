@@ -3,7 +3,7 @@ public class Sorts{
     for (int i = 0; i < ary.length; i++) {
       int small = ary[i];
       int store = small;
-      int index = 0;
+      int index = i;
       for (int j = i; j < ary.length; j++) {
         if (ary[j] < small) {
           index = j;
@@ -14,7 +14,7 @@ public class Sorts{
       ary[index] = store;
     }
   }
-  public String toString(int[] ary) {
+  public static String toString(int[] ary) {
     String s = "";
     for (int i = 0; i < ary.length; i++) {
       if (i == ary.length - 1) {
