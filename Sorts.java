@@ -6,11 +6,11 @@ public class Sorts{
       //stores the value and index of each one being compared so it can be switched with another value and index when needed
       int store = small;
       int index = i;
-      //loop starts from i because the number of array values to compare will get smaller as you sort the array
+      //loop starts from i because the number of array values to compare will get smaller as you sort the array; you can ignore the previous values
       for (int j = i; j < ary.length; j++) {
         //compares each value of the remaining indices to the smallest value set so far
         if (ary[j] < small) {
-          //stores the index of the number if being swapped
+          //stores the index of the number being swapped
           index = j;
           //sets the next smallest value in the array
           small = ary[j];
@@ -33,8 +33,8 @@ public class Sorts{
     }
     return s;
   }
-  //
-  public static void main(String[] args) {
+  //testing
+  /*public static void main(String[] args) {
     int[] ary = new int[] {6,3,9,2,2,1,5};
     int[] ary2 = new int[] {9,9,3,6,72,8,91,4,0};
     int[] ary3 = new int[] {10,32,54,6,7,84,23,9,0,1};
@@ -47,5 +47,5 @@ public class Sorts{
     System.out.println(toString(ary3));
     selectionsort(ary3);
     System.out.println(toString(ary3));
-  }
+  }*/
 }
