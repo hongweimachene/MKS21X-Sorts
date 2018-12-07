@@ -21,6 +21,19 @@ public class Sorts{
       ary[index] = store;
     }
   }
+  public static void bubbleSort(int[] ary) {
+    int aryLeft = ary.length;
+    while (aryLeft > 1) {
+      for (int i = 0; i < aryLeft-1; i++) {
+        int copy = ary[i];
+        if (ary[i] > ary[i+1]) {
+          ary[i] = ary[i+1];
+          ary[i+1] = copy;
+        }
+      }
+      aryLeft--;
+    }
+  }
   //added toString to test sort method
   public static String toString(int[] ary) {
     String s = "";
@@ -34,7 +47,7 @@ public class Sorts{
     return s;
   }
   //testing
-  /*public static void main(String[] args) {
+  public static void main(String[] args) {
     int[] ary = new int[] {6,3,9,2,2,1,5};
     int[] ary2 = new int[] {9,9,3,6,72,8,91,4,0};
     int[] ary3 = new int[] {10,32,54,6,7,84,23,9,0,1};
@@ -47,5 +60,17 @@ public class Sorts{
     System.out.println(toString(ary3));
     selectionsort(ary3);
     System.out.println(toString(ary3));
-  }*/
+    int[] ary4 = new int[] {5,1,12,-5,16};
+    System.out.println(toString(ary4));
+    bubbleSort(ary4);
+    System.out.println(toString(ary4));
+    int[] ary5 = new int[] {2,3,4,5,1};
+    System.out.println(toString(ary5));
+    bubbleSort(ary5);
+    System.out.println(toString(ary5));
+    int[] ary6 = new int[] {6,1,2,3,4,5};
+    System.out.println(toString(ary6));
+    bubbleSort(ary6);
+    System.out.println(toString(ary6));
+  }
 }
