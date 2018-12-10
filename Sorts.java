@@ -1,5 +1,9 @@
 public class Sorts{
-  public static void selectionsort(int[] ary) {
+  /**Bubble sort of an int array.
+ *Upon completion, the elements of the array will be in increasing order.
+ *@param data  the elements to be sorted.
+ */
+  public static void selectionSort(int[] ary) {
     for (int i = 0; i < ary.length; i++) {
       //stores each index as a variable to compare with rest of the array; it will be the variable that contains smallest number
       int small = ary[i];
@@ -22,6 +26,10 @@ public class Sorts{
     }
   }
 
+  /**Bubble sort of an int array.
+ *Upon completion, the elements of the array will be in increasing order.
+ *@param data  the elements to be sorted.
+ */
   public static void bubbleSort(int[] ary) {
     //the length of the array you check gets smaller as you sort
     for (int aryLeft = ary.length; aryLeft > 1; aryLeft--) {
