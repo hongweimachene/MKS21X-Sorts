@@ -21,19 +21,22 @@ public class Sorts{
       ary[index] = store;
     }
   }
+
   public static void bubbleSort(int[] ary) {
-    int aryLeft = ary.length;
-    while (aryLeft > 1) {
+    //the length of the array you check gets smaller as you sort
+    for (int aryLeft = ary.length; aryLeft > 1; aryLeft--) {
+      //runs the check to the end of whats left of the array
       for (int i = 0; i < aryLeft-1; i++) {
+        //for each index compare two consecutive values and switch them if the second is smaller
         int copy = ary[i];
         if (ary[i] > ary[i+1]) {
           ary[i] = ary[i+1];
           ary[i+1] = copy;
         }
       }
-      aryLeft--;
     }
   }
+
   //added toString to test sort method
   public static String toString(int[] ary) {
     String s = "";
@@ -47,7 +50,7 @@ public class Sorts{
     return s;
   }
   //testing
-  public static void main(String[] args) {
+  /*public static void main(String[] args) {
     int[] ary = new int[] {6,3,9,2,2,1,5};
     int[] ary2 = new int[] {9,9,3,6,72,8,91,4,0};
     int[] ary3 = new int[] {10,32,54,6,7,84,23,9,0,1};
@@ -72,5 +75,5 @@ public class Sorts{
     System.out.println(toString(ary6));
     bubbleSort(ary6);
     System.out.println(toString(ary6));
-  }
+  }*/
 }
