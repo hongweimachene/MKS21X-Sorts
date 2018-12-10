@@ -45,6 +45,17 @@ public class Sorts{
     }
   }
 
+  public static void insertionSort(int[] ary) {
+    for (int i = 1; i < ary.length; i++) {
+      for (int j = i - 1; j >= 0; j--) {
+        if (ary[i] < ary[j]) {
+          int store = ary[i];
+
+        }
+      }
+    }
+  }
+  
   //added toString to test sort method
   public static String toString(int[] ary) {
     String s = "";
@@ -63,13 +74,13 @@ public class Sorts{
     int[] ary2 = new int[] {9,9,3,6,72,8,91,4,0};
     int[] ary3 = new int[] {10,32,54,6,7,84,23,9,0,1};
     System.out.println(toString(ary));
-    selectionsort(ary);
+    selectionSort(ary);
     System.out.println(toString(ary));
     System.out.println(toString(ary2));
-    selectionsort(ary2);
+    selectionSort(ary2);
     System.out.println(toString(ary2));
     System.out.println(toString(ary3));
-    selectionsort(ary3);
+    selectionSort(ary3);
     System.out.println(toString(ary3));
     int[] ary4 = new int[] {5,1,12,-5,16};
     System.out.println(toString(ary4));
