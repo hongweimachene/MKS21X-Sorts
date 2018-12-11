@@ -46,13 +46,20 @@ public class Sorts{
   }
 
   public static void insertionSort(int[] ary) {
+    //the sort starts at index 1 because it is the sorted side
     for (int i = 1; i < ary.length; i++) {
+      //unsorted is being compared to each value in the sorted side
       int unsorted = ary[i];
       int sorted = i - 1;
+      //checks if sorted side is greater than the unsorted value
       while (sorted >= 0 && ary[sorted] > unsorted ) {
+        //shifts each value forward to the right if the sorted is greater
         ary[sorted+1] = ary[sorted];
         sorted--;
       }
+      //if the while loop is done, means sorted side is sorted and insert the unsorted
+      //into where it belongs,
+      //the right of the next smallest number
       ary[sorted+1] = unsorted;
     }
   }
