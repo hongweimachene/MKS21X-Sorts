@@ -77,7 +77,7 @@ public class Sorts{
     int[] ary4 = new int[] {5,1,12,-5,16};
     int[] ary5 = new int[] {2,3,4,5,1};
     int[] ary6 = new int[] {6,1,2,3,4,5};
-
+    int[] ary7 = new int[] {4,3,2,10,12,1,5,6};
     System.out.println(toString(ary));
     selectionSort(ary);
     System.out.println(toString(ary));
@@ -96,6 +96,8 @@ public class Sorts{
     System.out.println(toString(ary6));
     bubbleSort(ary6);
     System.out.println(toString(ary6));
-    
+    System.out.println(toString(ary7));
+    insertionSort(ary7);
+    System.out.println(toString(ary7));
   }
 }
