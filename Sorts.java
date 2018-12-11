@@ -47,15 +47,16 @@ public class Sorts{
 
   public static void insertionSort(int[] ary) {
     for (int i = 1; i < ary.length; i++) {
-      for (int j = i - 1; j >= 0; j--) {
-        if (ary[i] < ary[j]) {
-          int store = ary[i];
-
-        }
+      int unsorted = ary[i];
+      int sorted = i - 1;
+      while (sorted >= 0 && ary[sorted] > unsorted ) {
+        ary[sorted+1] = ary[sorted];
+        sorted--;
       }
+      ary[sorted+1] = unsorted;
     }
   }
-  
+
   //added toString to test sort method
   public static String toString(int[] ary) {
     String s = "";
@@ -69,10 +70,14 @@ public class Sorts{
     return s;
   }
   //testing
-  /*public static void main(String[] args) {
+  public static void main(String[] args) {
     int[] ary = new int[] {6,3,9,2,2,1,5};
     int[] ary2 = new int[] {9,9,3,6,72,8,91,4,0};
     int[] ary3 = new int[] {10,32,54,6,7,84,23,9,0,1};
+    int[] ary4 = new int[] {5,1,12,-5,16};
+    int[] ary5 = new int[] {2,3,4,5,1};
+    int[] ary6 = new int[] {6,1,2,3,4,5};
+
     System.out.println(toString(ary));
     selectionSort(ary);
     System.out.println(toString(ary));
@@ -82,17 +87,15 @@ public class Sorts{
     System.out.println(toString(ary3));
     selectionSort(ary3);
     System.out.println(toString(ary3));
-    int[] ary4 = new int[] {5,1,12,-5,16};
     System.out.println(toString(ary4));
     bubbleSort(ary4);
     System.out.println(toString(ary4));
-    int[] ary5 = new int[] {2,3,4,5,1};
     System.out.println(toString(ary5));
     bubbleSort(ary5);
     System.out.println(toString(ary5));
-    int[] ary6 = new int[] {6,1,2,3,4,5};
     System.out.println(toString(ary6));
     bubbleSort(ary6);
     System.out.println(toString(ary6));
-  }*/
+    
+  }
 }
